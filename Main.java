@@ -1,22 +1,18 @@
-public class WordMatch { 
+public class Main {
+    public static void main(String[] args) {
 
-private String secret;
+    WordMatch w = new WordMatch("mississippi");
+    System.out.println(w.scoreGuess("i"));
+    System.out.println(w.scoreGuess("iss"));
+    System.out.println(w.scoreGuess("issipp"));
+    System.out.println(w.scoreGuess("mississippi"));
 
-public WordMatch(String word) { }
-
-public int scoreGuess(String guess) {
-    for (i = 0; i < secret.length(); i++;) { 
-        String guess1;
-        int count;
-        String check = secret.substring(i,i+1);
-        if guess.contains(check) {
-            count
-        }
-       
-        }
-        return count;
+    WordMatch game = new WordMatch("concatenation");
+    System.out.println(game.scoreGuess("ten"));
+    System.out.println(game.scoreGuess("nation"));
+    System.out.println(game.findBetterGuess("ten", "nation"));
+    System.out.println(game.scoreGuess("con"));
+    System.out.println(game.scoreGuess("cat"));
+    System.out.println(game.findBetterGuess("con", "cat"));
     }
-} 
-
-public String findBetterGuess(String guess1, String guess2){} 
-} 
+}
